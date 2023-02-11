@@ -1,0 +1,78 @@
+verificar versão: docker version | docker --version
+
+verificar containers: docker container ls (ps, list)
+verificar todos containers incluindo os nor running: docker container ls -a
+historico de comandos: history
+
+comando run: docker container run 
+  - concatenação de 4 comandos:
+	--docker image pull (baixa a imagem do registry)
+	--docker container create (criação do container)
+	--docker container start (inicialização do container)
+	--docker container exec (execução do container)
+
+**modo interativo é útil para teste, visualização do container**
+
+baixar imagem do registry: docker container run <image_name>
+
+(-ti) : terminal e interatividade, quando o container ser executado na ter conexao com ele
+(-d) : rodar como deamon
+
+-docker container attach <nome>: entrar no container
+
+modo interativo com acesso ao terminal do container: docker container run -it debian bash
+a cada run é criado um novo container
+ 
+nomear um container: docker container run --name
+
+docker cpm
+
+___
+
+-docker container run -p 8080:80 nginx (80 porta do nginx e o usuário tem acesso pela 8080)
+curl http://localhost:8080 acessa a aplicação
+
+-docker container stop <name>
+
+-flag -v mapeia volume: docker container run -p 8080:80 -v $(pwd)/<arquivo>:/usr/share/nginx/html nginx
+ex.: -v pasta do host e arquivo 
+
+-docker container run -p 8080:80 -v C:\Users\mathe\OneDrive\Documentos\repos\Docker\Docker_cod3r\ex_volume\html:/usr/share/nginx/html nginx 
+
+rodar em background
+-docker container run -d --nome ex-daemon-basic -p 8080:80 -v <caminho_host>:<caminho_remoto>
+
+-docker container restart <nome>: restarta
+
+-docker container ls -a : mostra tudo msm oq não esta sendo executado
+
+-docker container logs <nome>: mostra os logs realizados no container
+
+-docker container inspect <nome>
+
+-docker container exec <nome> uname -or: executa algo
+	docker container exec -ti <nome> ls /usr/share/nginx
+
+-docker node pause [CONTAINER ID]: pausar container
+
+-docker image pull <nome:tag>
+
+-docker image tag redis:latest <nome>: adiciona um nome à image 
+
+-docker image rm redis:latest cod3r-redis: remover a image
+
+---- Manipulação de image
+Todos começam com docker image
+
+1 - docker image pull: baixar imagem
+2 - docker image ls : listar imagens 
+3 - docker image rm <nome1> <nome2>: remove 1 ou mais image 
+4 - docker image inspect <nome>: json com info importante
+5 - docker image tag <nome> <tag>: adiciona tag em image
+6 - docker image build <nome>: construir a imagem
+7 - docker image push <nome>: publicar image
+------------
+
+-docker image build -t ex-simple-build .:-t serve para adicionar a tag na image
+
+
