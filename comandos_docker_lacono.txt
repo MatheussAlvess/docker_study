@@ -1,8 +1,3 @@
--docker build -t <nome> <dir> :: construir imagem a partir do Dockerfile
--docker run <nome> :: rodar imagem
--docker pull ubuntu :: baixa imagem
--docer run -it ubuntu :: baixa em modo interativo
--docker exec -it <nome> /bin/bash :: entrar no terminal do container
 _____
 COMANDOS LINUX:
 -whoami :: qual usuario
@@ -14,7 +9,46 @@ COMANDOS LINUX:
 -apt install <nome> :: instala pacote 
 -apt remove <nome> :: desistala pacote
 -ls -1 :: listar diretorios 
--ls -l :: passa informações sobre diretorios
+-ls -l :: passa informações sobre diretorios (mostra permissoes)
+-ls -a :: lista inclusive os ocultos
 -cd /etc :: change directory para /etc
 -cd .. :: volta directory
 -ls /repo1/repo2
+-cd ~ :: ir para home permancendo no root
+-mkdir :: cria pasta
+-mv matheus matheusalves :: move ou renomeia 
+-touch :: cria arquivo 
+-rm :: remove arquivo
+-rm -m :: remove diretorio
+-cat <arq1> :: serve para abrir arquivo
+-cat <arq1> > <arq2> :: redireciona conteudo
+-cat <arq1> <arq2> > <arq3> :: concatena arq1 e arq2 dentro de arq3
+-more :: abri arquivo por partes
+-echo <msg> > <arq> :: redireciona msg para dentro do arquivo
+-grep <cha> <arq> :: (global regular expression print) procura por caracter dentrodo arquivo
+-find :: procura (-type f = file -type d = diretorio)
+-; :: separa comandos para executar na msm linha
+-&& :: separa comandos para executar na msms linha porem so continuar se der certo
+-ps :: visualizar processos (visualiza id do processo (PID))
+-sleep <tempo> :: fazer terminal nao responder por tempo especificado
+-kill <PID> :: termina o processo
+-useradd -m matheus :: cria usuario
+-usermod :: modifica usuario
+-userdel :: exclui usuario
+-groups <user> :: verifica grupos que o usuario pertence
+-groupadd :: cria grupo
+-groupamod :: modifica grupo
+-groupdel :: deleta grupo
+-usermod -G <grupo> <user> :: adiciona usuario no grupo 
+-chmod u+x <arq> :: da permissao de execucao para arquivo (change mode)
+--- Permissoes -- r = read, w = write, x = execute
+- | --- | --- | --- (arquivo ou diretorio | user | grupo | todos outros)
+
+_______
+COMANDOS DOCKER
+-docker build -t <nome> <dir> :: construir imagem a partir do Dockerfile
+-docker run <nome> :: rodar imagem
+-docker pull ubuntu :: baixa imagem
+-docer run -it ubuntu :: baixa em modo interativo
+-docker exec -it <nome> /bin/bash :: entrar no terminal do container
+-docker exec -it <nome> -u <user> /bin/bash :: entrar no terminal do container no usuario especificado
