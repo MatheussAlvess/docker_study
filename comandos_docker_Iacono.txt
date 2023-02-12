@@ -52,3 +52,24 @@ COMANDOS DOCKER
 -docer run -it ubuntu :: baixa em modo interativo
 -docker exec -it <nome> /bin/bash :: entrar no terminal do container
 -docker exec -it <nome> -u <user> /bin/bash :: entrar no terminal do container no usuario especificado
+
+Dockerfile Structure
+    -FROM = imagem base (qual so, qual linguagem)
+    -WORKDIR = pasta de trabalho (trabalhe nesse diretorio)
+    -COPY/ADD = enviar arqvuivos para imagem 
+    -RUN = coloca aplicação em funcionamento (instala dependencias)
+    -ENV = config de ambiente 
+    -EXPOSE = responsavel pela porta
+    -USER = Quem é o usuario que vai rodar
+    -CMD
+    -ENRTYPOINT
+
+ex.:
+    FROM node:12-alpine
+    WORKDIR /app
+    RUN addgroup dev && adduser -S -G matheus dev
+    USER matheus
+    COPY . . #copia arquivos e diretorios
+    RUN #Executa na construcao
+    CMD #excuta na inicializacao
+    #ADD teste.zip . #descompacta e acessa site

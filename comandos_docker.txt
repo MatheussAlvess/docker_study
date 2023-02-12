@@ -59,7 +59,7 @@ rodar em background
 
 -docker image tag redis:latest <nome>: adiciona um nome à image 
 
--docker image rm redis:latest cod3r-redis: remover a image
+-docker image rm redis:latest cod3r-redis :: remover a image
 
 ---- Manipulação de image
 Todos começam com docker image
