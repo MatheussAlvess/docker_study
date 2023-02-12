@@ -76,3 +76,5 @@ Todos começam com docker image
 -docker image build -t ex-simple-build .:-t serve para adicionar a tag na image
 
 
+
+

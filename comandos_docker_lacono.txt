@@ -1,0 +1,20 @@
+-docker build -t <nome> <dir> :: construir imagem a partir do Dockerfile
+-docker run <nome> :: rodar imagem
+-docker pull ubuntu :: baixa imagem
+-docer run -it ubuntu :: baixa em modo interativo
+-docker exec -it <nome> /bin/bash :: entrar no terminal do container
+_____
+COMANDOS LINUX:
+-whoami :: qual usuario
+-echo :: retorna na tela (echo olá) 
+-echo $0 :: qual diretório está (ou pwd)
+-history :: ultimos comandos
+-apt list :: lista de pacotes (apt = advanced package tool)
+-apt update :: atualizar pacotes
+-apt install <nome> :: instala pacote 
+-apt remove <nome> :: desistala pacote
+-ls -1 :: listar diretorios 
+-ls -l :: passa informações sobre diretorios
+-cd /etc :: change directory para /etc
+-cd .. :: volta directory
+-ls /repo1/repo2
