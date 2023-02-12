@@ -79,7 +79,7 @@ Todos começam com docker image
 -docker push repositorio:tag = mandar para dockerhub
 -docker image save -o appv1.tar app:v1.0.0 :: salva compactado
 -docker image load -i appv1.tar :: carrega imagem compactada
-
-
+-docker run -d app:v2 :: executa em background (-d)
+-docker run -d --name manga app:v2 :: da outro nome para o container
 
 
