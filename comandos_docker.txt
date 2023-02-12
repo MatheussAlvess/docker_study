@@ -81,5 +81,7 @@ Todos começam com docker image
 -docker image load -i appv1.tar :: carrega imagem compactada
 -docker run -d app:v2 :: executa em background (-d)
 -docker run -d --name manga app:v2 :: da outro nome para o container
-
-
+-docker run -d -p host:docker --name banana app:v1 :: sobe o app na porta especificada
+-docker volume create <app-dados> :: criar volume 
+-docker run -dp 3000:3000 --name kiwi2 -v app-dados:/app/dados app:v1 :: 
+-docker cp <origem:dir> <destino> :: copiar arquivo do container para local 
