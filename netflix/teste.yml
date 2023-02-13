@@ -7,12 +7,12 @@ services:
     build: ./frontend
     ports:
       - 3000:3000
-      
-  backend:
-    depends_on:
+
+  backend: 
+    depends_on: 
       - db
     build: ./backend
-    ports:
+    ports: 
       - 3001:3001
     environment: 
       DB_URL: mongodb://db/vidly
@@ -20,9 +20,9 @@ services:
 
   db:
     image: mongo:4.0-xenial
-    ports: 
+    ports:
       - 27017:27017
-    volumes: 
+    volumes:
       - vidly:/data/db
 
 volumes:

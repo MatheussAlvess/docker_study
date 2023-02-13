@@ -85,5 +85,6 @@ Todos começam com docker image
 -docker volume create <app-dados> :: criar volume 
 -docker run -dp 3000:3000 --name kiwi2 -v app-dados:/app/dados app:v1 :: 
 -docker cp <origem:dir> <destino> :: copiar arquivo do container para local 
-
-docker container rm -f 0c58e4e8083a 9a11de8a5ad0 176a8658ee46 39f65235020c 
+-docker-compose up :: roda o docker compose (pode ser -d , --build)
+-docker-compose down :: parar containers
+-docker-compose logs :: mostra logs

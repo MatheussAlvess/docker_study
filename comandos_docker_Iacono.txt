@@ -41,6 +41,8 @@ COMANDOS LINUX:
 -groupdel :: deleta grupo
 -usermod -G <grupo> <user> :: adiciona usuario no grupo 
 -chmod u+x <arq> :: da permissao de execucao para arquivo (change mode)
+-ifconfig :: informacoes de configuracao (mostra ip)
+
 --- Permissoes -- r = read, w = write, x = execute
 - | --- | --- | --- (arquivo ou diretorio | user | grupo | todos outros)
 
